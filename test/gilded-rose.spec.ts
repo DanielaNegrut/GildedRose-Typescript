@@ -130,3 +130,23 @@ describe('Gilded Rose', function () {
         expect(items[0].quality).to.equal(80);
     });
 });
+
+describe('Gilded Rose', function () {
+    it('should foo', function() {
+        const gildedRose = new GildedRose([ new Item("Conjured Mana Cake", 1, 10)]);
+        const items = gildedRose.updateQuality();
+        expect(items[0].name).to.equal('Conjured Mana Cake');
+        expect(items[0].sellIn).to.equal(0);
+        expect(items[0].quality).to.equal(8);
+    });
+});
+
+describe('Gilded Rose', function () {
+    it('should foo', function() {
+        const gildedRose = new GildedRose([ new Item("Conjured Mana Cake", 0, 10)]);
+        const items = gildedRose.updateQuality();
+        expect(items[0].name).to.equal('Conjured Mana Cake');
+        expect(items[0].sellIn).to.equal(-1);
+        expect(items[0].quality).to.equal(6);
+    });
+});

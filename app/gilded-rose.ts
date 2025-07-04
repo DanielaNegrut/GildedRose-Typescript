@@ -45,9 +45,11 @@ export class GildedRose {
                 }
                 continue
             }
-            this.items[i].quality = this.items[i].quality - 1
+            const decrease = this.items[i].name.includes('Conjured') ?
+                                     1 : 0
+            this.items[i].quality = this.items[i].quality - 1 - decrease
             if (this.items[i].sellIn < 0) {
-                this.items[i].quality = this.items[i].quality - 1
+                this.items[i].quality = this.items[i].quality - 1 - decrease
             }
             if (this.items[i].quality < 0) {
                 this.items[i].quality = 0
