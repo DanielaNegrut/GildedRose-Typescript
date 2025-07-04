@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+const {expect} = require('chai');
 import { Item, GildedRose } from '../app/gilded-rose';
 
 describe('Gilded Rose', function () {
