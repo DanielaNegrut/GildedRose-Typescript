@@ -1,7 +1,7 @@
-import { Item, GildedRose } from '../app/gilded-rose';
 const {expect} = require('chai');
+import { Item, GildedRose } from '../app/gilded-rose';
 
-const item1: Item = new Item("Sulfuras", 0, 80)
+const item1: Item = new Item("Sulfuras, Hand of Ragnaros", 0, 80)
 const item2: Item = new Item("Backstage passes", 20, 5)
 const item3: Item = new Item("Backstage passes", 10, 5)
 const item4: Item = new Item("Backstage passes", 5, 5)
